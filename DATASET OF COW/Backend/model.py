@@ -15,10 +15,7 @@ class ResNet50Embedding(nn.Module):
         super().__init__()
 
         # Load ImageNet pretrained ResNet50
-        self.backbone = resnet50(
-            weights=ResNet50_Weights.DEFAULT
-        )
-
+        self.backbone = resnet50(weights=None)
         # ResNet50 originally produces 2048 features
         num_features = self.backbone.fc.in_features
 
