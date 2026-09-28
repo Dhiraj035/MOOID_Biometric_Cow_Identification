@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pymongo
+python-dotenv
+PyJWT
+pwdlib[argon2]
+email-validator
+opencv-python-headless
+numpy
+faiss-cpu
+Pillow
+ultralytics

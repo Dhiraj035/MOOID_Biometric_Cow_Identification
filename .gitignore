@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Frontend build
+frontend/dist/
+
+# Python cache
+.pytest_cache/
+.mypy_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Large ML models
+*.pth
+*.pt
+*.onnx
+
+# FAISS / generated ML files
+*.faiss
+*.npy
+
+# YOLO training outputs
+runs/
+
+# Dataset
+DATASET OF COW/*/dataset/
+cow_Datasets/
+# Test images
+test_registered_cow.jpg
+# Registered cow images
+DATASET OF COW/Backend/registered_cow_images/
+DATASET OF COW/registered_cow_images/

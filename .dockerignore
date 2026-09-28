@@ -1,0 +1,26 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+.env
+
+.git/
+.gitignore
+
+frontend/
+node_modules/
+dist/
+
+DATASET OF COW/dataset/
+DATASET OF COW/Raw/
+DATASET OF COW/muzzle/
+DATASET OF COW/YOLO_MUZZLE_DATASET/
+
+runs/detect/train-2/labels/
+runs/detect/train-2/val_batch0_labels.jpg
+runs/detect/train-2/val_batch0_pred.jpg
+runs/detect/train-2/val_batch1_labels.jpg
+runs/detect/train-2/val_batch1_pred.jpg
+runs/detect/train-2/val_batch2_labels.jpg
+runs/detect/train-2/val_batch2_pred.jpg

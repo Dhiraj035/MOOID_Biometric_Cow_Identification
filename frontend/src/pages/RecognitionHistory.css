@@ -1,0 +1,188 @@
+/* =========================================================
+   RECOGNITION HISTORY PAGE STYLES
+========================================================= */
+
+.history-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.history-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.history-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.history-loading-box {
+  padding: 24px;
+}
+
+.history-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table th {
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: var(--surface-secondary);
+  border-bottom: 1px solid var(--border);
+}
+
+.history-table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .history-table td {
+  border-bottom-color: var(--border);
+}
+
+.history-row:hover td {
+  background: var(--surface-secondary);
+}
+
+.action-label {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.cow-id-tag {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13px;
+  padding: 2px 7px;
+  background: var(--surface-secondary);
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  color: var(--text-main);
+}
+
+.cow-id-placeholder {
+  color: var(--text-muted);
+}
+
+.time-cell {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Empty State */
+.history-empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.empty-history-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--surface-secondary);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.history-empty-state h3 {
+  font-size: 18px;
+  color: var(--text-main);
+}
+
+.history-empty-state p {
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 360px;
+}
+
+/* Mobile Stacked History List */
+.history-mobile-list {
+  display: none;
+  flex-direction: column;
+  padding: 12px;
+  gap: 10px;
+}
+
+.history-mobile-item {
+  padding: 14px 16px;
+  background: var(--surface-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mobile-item-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-item-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mobile-item-action {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.mobile-item-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.mobile-item-id strong {
+  color: var(--text-main);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 768px) {
+  .history-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .history-table-container {
+    display: none;
+  }
+
+  .history-mobile-list {
+    display: flex;
+  }
+}
