@@ -103,13 +103,13 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "http://localhost:5174",
+        "http://127.0.0.1:5174",
 
-        # Vercel production
         "https://mooid-biometric-cow-identification.vercel.app",
-    ],
 
-    # Allow Vercel preview deployments
-    allow_origin_regex=r"^https://mooid-biometric-cow-identification-[a-z0-9-]+\.vercel\.app$",
+        "https://mooid-biometric-cow-identification-i00gqfoci-sit18.vercel.app",
+    ],
 
     allow_credentials=True,
     allow_methods=["*"],
