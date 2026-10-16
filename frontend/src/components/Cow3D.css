@@ -1,0 +1,179 @@
+/* =========================================================
+   COW 3D INTERACTIVE HERO COMPONENT
+   Calm, Minimalist & Natural Agricultural Aesthetic
+========================================================= */
+
+.cow-3d-wrapper {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  min-height: 420px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+/* Canvas Container */
+.canvas-container {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  cursor: grab;
+  touch-action: none;
+}
+
+.canvas-container:active {
+  cursor: grabbing;
+}
+
+.canvas-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  touch-action: none;
+  outline: none;
+  display: block;
+}
+
+/* 3D Loading Overlay */
+.cow-3d-loading-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(247, 248, 244, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 10;
+  gap: 16px;
+  padding: 24px;
+}
+
+.spin-loader {
+  color: #8BAF9A;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.loading-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #24443A;
+  letter-spacing: -0.01em;
+}
+
+.loading-subtitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+  color: #68766F;
+  max-width: 260px;
+}
+
+/* Error Fallback */
+.cow-3d-error-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  background: rgba(247, 248, 244, 0.95);
+  border: 1px solid #DDE6DF;
+  border-radius: 16px;
+  z-index: 10;
+}
+
+.error-icon-wrap {
+  color: #8BAF9A;
+  margin-bottom: 12px;
+}
+
+.cow-3d-error-fallback h3 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #24443A;
+  margin-bottom: 8px;
+}
+
+.cow-3d-error-fallback p {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  color: #68766F;
+  max-width: 320px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.retry-3d-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: #24443A;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.retry-3d-btn:hover {
+  background: #1B352D;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN (TABLETS & MOBILE)
+========================================================= */
+
+@media (max-width: 1024px) {
+  .cow-3d-wrapper {
+    height: 480px;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cow-3d-wrapper {
+    height: 400px;
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cow-3d-wrapper {
+    height: 340px;
+    min-height: 300px;
+  }
+}

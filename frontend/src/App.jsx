@@ -18,10 +18,14 @@ import RecognitionHistory from "./pages/RecognitionHistory";
 import Profile from "./pages/Profile";
 import SettingsPage from "./pages/SettingsPage";
 
+import LandingPage from "./pages/LandingPage";
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* PUBLIC LANDING & AUTH ROUTES */}
+        <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
@@ -34,7 +38,6 @@ function App() {
         <Route path="/profile" element={<ProtectedRoute><Layout><Profile /></Layout></ProtectedRoute>} />
         <Route path="/settings" element={<ProtectedRoute><Layout><SettingsPage /></Layout></ProtectedRoute>} />
 
-        <Route path="/" element={<Navigate to="/dashboard" replace />} />
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Routes>
     </BrowserRouter>
